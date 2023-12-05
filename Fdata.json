@@ -1,0 +1,40 @@
+{
+    "financials": [
+    {
+    "date": "2023-06-04",
+    "income": 141990.74,
+    "expenses": 61757.28,
+    "currency": "KES"
+    },
+    {
+    "date": "2023-07-04",
+    "income": 130209.13,
+    "expenses": 55640.33,
+    "currency": "KES"
+    },
+    {
+    "date": "2023-08-03",
+    "income": 140270.46,
+    "expenses": 94191.88,
+    "currency": "KES"
+    },
+    {
+    "date": "2023-09-02",
+    "income": 141455.95,
+    "expenses": 96263.1,
+    "currency": "KES"
+    },
+    {
+    "date": "2023-10-02",
+    "income": 136553.14,
+    "expenses": 33351.11,
+    "currency": "KES"
+    },
+    {
+    "date": "2023-11-01",
+    "income": 123779.05,
+    "expenses": 73374.59,
+    "currency": "KES"
+    }
+    ]
+    }
