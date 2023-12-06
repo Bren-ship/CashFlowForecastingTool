@@ -1,36 +1,51 @@
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: Helvetica, sans-serif;
-    margin: 20px;
-    background:linear-gradient(#418176, #80cea3, #b5d5c4);
+    background: linear-gradient(#00796b, #00acc1); /* Blue-Green gradient */
     font-size: 16px;
-}
-div {
-    margin: 0 auto;
-    padding-top: 50px;
-    width: 460px;
-  }
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    color: #fff; /* Text color */
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #195330;
+    background-color: #fff; /* White container background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+h1, h2, h3 {
+    color: #00796b; /* Dark teal heading color */
+}
+
+/* Table styling */
+table {
+    text-transform: capitalize;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #00796b; /* Dark teal header background */
+    color: #fff;
+}
+
+/* Chart container styling */
 #chartContainer {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

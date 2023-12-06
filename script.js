@@ -13,14 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(forecast);
             displayForecast(forecast);
 
-            //Basic chart display
+               //Basic chart display
             displayChart(financialData, forecast);
 
         })
         .catch(error => console.error('Error fetching data:', error));
     
 });
-
 
 
 
@@ -69,27 +68,34 @@ function displayForecast(forecast){
     //Forecast data display logic
     const forecastContainer = document.getElementById('forecastContainer');
 
+    // Clear previous content
+    forecastContainer.innerHTML = '';
+
     // Create elements to display forecast
+    const title = document.createElement('h2');
+    title.textContent = 'Historical Data';
+    forecastContainer.appendChild(title);
+
     const incomeElement = document.createElement('p');
-    incomeElement.textContent = `Average Income: ${forecast.averageIncome}`;
+    incomeElement.textContent = `Average Income: ${forecast.averageIncome.toFixed(2)}`; // Format to two decimal places
+    forecastContainer.appendChild(incomeElement);
 
     const expensesElement = document.createElement('p');
-    expensesElement.textContent = `Average Expenses: ${forecast.averageExpenses}`;
-
-    // Append elements to the container
-    forecastContainer.appendChild(incomeElement);
+    expensesElement.textContent = `Average Expenses: ${forecast.averageExpenses.toFixed(2)}`; // Format to two decimal places
     forecastContainer.appendChild(expensesElement);
+
 }
 
-function displayChart(financialData, forecast){
-    //Logic to generate and show a basic chart
-    let chartContainer;
+
+
+function displayChart(financialData, forecast) {
+    //Logic to generate and show a combined chart
     chartContainer = document.getElementById('chartContainer');
     const ctx = document.getElementById('myChart').getContext('2d');
     let myChart;
+
     // Convert dates to a format compatible with Chart.js
     const formattedDates = financialData.map(entry => moment(entry.date).format('YYYY-MM-DD'));
-
 
     const chartData = {
         labels: formattedDates,
@@ -97,6 +103,8 @@ function displayChart(financialData, forecast){
             {
                 label: 'Income',
                 data: financialData.map(entry => entry.income),
+                type: 'bar',
+                backgroundColor: 'rgba(75, 192, 192, 1)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1,
                 fill: false
@@ -104,6 +112,8 @@ function displayChart(financialData, forecast){
             {
                 label: 'Expenses',
                 data: financialData.map(entry => entry.expenses),
+                type: 'bar',
+                backgroundColor: 'rgba(255, 99, 132, 1)',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 1,
                 fill: false
@@ -111,6 +121,7 @@ function displayChart(financialData, forecast){
             {
                 label: 'Forecast Income',
                 data: Array(financialData.length).fill(forecast.averageIncome),
+                type: 'line',
                 borderColor: 'rgba(75, 192, 192, 0.2)',
                 borderWidth: 1,
                 fill: false
@@ -118,6 +129,7 @@ function displayChart(financialData, forecast){
             {
                 label: 'Forecast Expenses',
                 data: Array(financialData.length).fill(forecast.averageExpenses),
+                type: 'line',
                 borderColor: 'rgba(255, 99, 132, 0.2)',
                 borderWidth: 1,
                 fill: false
@@ -126,18 +138,40 @@ function displayChart(financialData, forecast){
     };
 
     myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: chartData,
         options: {
             scales: {
                 x: {
-                    type: 'time',
-                    time: {
-                        unit: 'day'
+                    type: 'linear',
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+                            return moment(value).format('MMM DD');
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Date'
                     }
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Amount'
+                    }
+                }
+            },
+            elements: {
+                line: {
+                    tension: 0
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Graph of Historical Data against Forecasted Data'
                 }
             }
         }

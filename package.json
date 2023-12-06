@@ -2,4 +2,11 @@
   "devDependencies": {
     "@types/chart.js": "^2.9.41"
   },
- 
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "chartjs-adapter-moment": "^1.0.1",
+    "date-fns": "^2.30.0",
+    "moment": "^2.29.4"
+  }
+}
