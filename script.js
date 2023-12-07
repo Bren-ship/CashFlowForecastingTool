@@ -101,6 +101,7 @@ function displayChart(financialData, forecast) {
  console.log(formattedDates);
     // Add a label for the forecast
  const labels = formattedDates.concat(['Forecast']);
+ console.log(labels);
 
     const chartData = {
         labels:labels,  // Add a label for the forecast
@@ -130,15 +131,16 @@ function displayChart(financialData, forecast) {
         options: {
             scales: {
                 x: {
-                    type: 'time',
+                    //type: 'time',
                     time:{
                         unit:'day',
                         tooltipFormat: 'll',
 
-
                     },
                     ticks: {
                        source:'auto',
+                       //autoSkip:'true',
+                       //maxTicksLimit: 12
                     },
                     
                     title: {
