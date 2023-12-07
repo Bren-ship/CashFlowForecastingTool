@@ -139,8 +139,6 @@ function displayChart(financialData, forecast) {
                     },
                     ticks: {
                        source:'auto',
-                       //autoSkip:'true',
-                       //maxTicksLimit: 12
                     },
                     
                     title: {
