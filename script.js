@@ -162,7 +162,7 @@ function displayChart(financialData, forecast) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Graph of Historical Data against Forecasted Data'
+                    text: 'Graph of Historical Data and Forecasted Data'
                 }
             }
         }

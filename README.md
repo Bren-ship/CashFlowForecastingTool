@@ -21,7 +21,7 @@ Frontend: HTML, CSS, JavaScript
 
 bash
 Copy code
-git clone https://github.com/Bren-ship/CashFlowForecastingTool.git
+git clone (the master branch) https://github.com/Bren-ship/CashFlowForecastingTool.git
 Open index.html in your web browser.
 
 Explore the historical data, forecast, and the basic chart.
