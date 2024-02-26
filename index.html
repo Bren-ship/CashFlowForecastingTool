@@ -4,22 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cash Flow Forecasting Tool</title>
+        <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script> 
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/regression/1.4.0/regression.min.js"></script>  -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="container">
-        <div id="historical-data">
+
+        <div id="historical-data" >
             <!--Historical Financial Data Table-->
+            <p><b>Historical Data</b></p>
+        </div>
+                
+        <div id="chartContainer">
+            <!-- Historical Chart -->
+            <canvas id="myChart" ></canvas>
         </div>
         <div id="forecastContainer">
-            <!--Forecast Data Table-->
+            <!--Forecast Data -->
         </div>
-        <div id="chartContainer">
-            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        <div id="chart2Container">
+            <!-- Forecast Chart -->
+            <canvas id="my2Chart"></canvas>
         </div>
-        
         <script src="script.js"></script>
+    
     </body>
 </html>          
