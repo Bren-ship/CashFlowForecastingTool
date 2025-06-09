@@ -120,7 +120,7 @@ function displayChart(financialData) {
       plugins: {
         title: {
           display: true,
-          text: "Graph of Historical Data",
+          text: "Historical Data Graph",
         },
       },
     },

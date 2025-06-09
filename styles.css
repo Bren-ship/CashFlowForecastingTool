@@ -6,8 +6,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(#00796b, #1e4c52); /* Blue-Green gradient */
-    min-height:100%;
+    background-color: linear-gradient(#52c234, #061700);
+    /* min-height:100%;  */
 }
 
   
@@ -16,9 +16,9 @@ body {
     max-width: 800px;
     margin: 0 auto;
     height: auto;
-    padding: 20px;
-    background-color: #fff; /* White container background */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: auto;
+    /* background: #fff;  */
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); */
    
 }
 
@@ -31,7 +31,7 @@ p{
 
 
 h1, h2, h3 {
-    color: linear-gradient(to right   , rgba(30,76,82), rgba(45, 173, 182, 0));
+    /* color: linear-gradient(to right   , rgba(30,76,82), rgba(45, 173, 182, 0)); */
 
 }
 
@@ -46,24 +46,25 @@ table {
 }
 
 th, td {
-    border: 1px solid #ffffff;
+    border: 1px solid;
     padding: 5px;
     text-align: left;
     font-size: 15px;
-    color: #ffffff; /* Text color */  
+    color: #000000; /*Text color*/  
 }
 
 th {
-    background-color: #00796b; /* Dark teal header background */
-    color: #ffffff;
+    /* background-color: #00796b;  */
+    /* Dark teal header background */
+    color: #030303;
 }
 
 /* Chart container styling */
 #chartContainer {
     margin-top: 40px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(39, 121, 153, 0.1);
+    /* background: #fff; */
+    /* box-shadow: 0 0 10px rgba(39, 121, 153, 0.1); */
     width:700px;
     height: 350px;;
 }
@@ -77,8 +78,8 @@ th {
 #chart2Container {
     margin-top: 40px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(39, 121, 153, 0.1);
+    /* background: #fff; */
+    /* box-shadow: 0 0 10px rgba(39, 121, 153, 0.1); */
     width:700px;
     height: 350px;;
 }
